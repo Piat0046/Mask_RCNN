@@ -17,5 +17,5 @@ for i in range(len(file_list)):
         region[a] = {'shape_attributes' : st_python[file_list[i]]['regions'][a]['shape_attributes'], 'region_attributes' : st_python[file_list[i]]['regions'][a]['region_attributes']}
     doc[file_list[i]+str(st_python[file_list[i]]['size'])] = {"fileref": "", 'size': st_python[file_list[i]]['size'], 'filename':file_list[i],'base64_img_data':"", 'file_attributes': {}, 'regions' : region}
 
-with open('via_region_data.json', 'w') as f:
+with open('via_region_data.json', 'w', encoding='UTF-8') as f:
     json.dump(doc, f)
