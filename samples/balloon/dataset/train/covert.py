@@ -6,7 +6,7 @@ path = '/Users/piat/s5/cp2/Mask_RCNN/samples/balloon/dataset/val/via.json'
 
 with open(path, "r") as st_json:
     st_python = json.load(st_json)
-    
+
 file_list = list(st_python.keys())
 
 doc = {}
@@ -18,3 +18,6 @@ for i in range(len(file_list)):
 
 with open('/Users/piat/s5/cp2/Mask_RCNN/samples/balloon/dataset/val/via_region_data.json', 'w') as f:
     json.dump(doc, f)
+
+with open('/Users/piat/s5/cp2/Mask_RCNN/samples/balloon/dataset/val/via_region_data.json', "r") as st_json:
+    st_python = json.load(st_json)
